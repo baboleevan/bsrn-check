@@ -1,5 +1,5 @@
 	var is_bsrn = function(v) {
-		v = String(v).replace(/-/gi, '');
+		v = String(v).replace(/[^0-9]/g, '');
 		if (v.length == 10) {
 			var sum = 0, arr = [1, 3, 7, 1, 3, 7, 1, 3, 5], tmp, last = v.charAt(9), _last;
 			for(var i=0; i < 9; i++) {
